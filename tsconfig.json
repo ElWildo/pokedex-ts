@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "./dist/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "esModuleInterop":true,
+    "target": "es2017",
+    "allowSyntheticDefaultImports": true,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": [
+    "./src/index.tsx",
+    "./images.d.ts"
+  ]
+}
