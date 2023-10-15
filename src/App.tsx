@@ -15,6 +15,7 @@ class App extends Component<AppProps,AppState> {
     pokemon: null
   };
   
+    // Handler for pokemon selection
     handleOnClick = (url: string) =>{
       fetch(url)
         .then(res => res.json())

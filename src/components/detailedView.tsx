@@ -6,6 +6,7 @@ type DetailViewProps = {
   pokemon: Pokemon | null;
 };
 
+// Check if the element is a pokemon and exist
 function isPokemonAndExist(pokemon: Pokemon): boolean{
   return (pokemon instanceof Pokemon && !!pokemon)
 }

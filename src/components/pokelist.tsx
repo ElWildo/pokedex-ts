@@ -33,6 +33,7 @@ class PokeList extends Component<PokeListProps, PokeListState> {
         this.myRef = React.createRef() as React.MutableRefObject<HTMLInputElement>;
     }
 
+    // Allow lazy loading requesting new data only when the element at the end of the list reach the visible area
     handleScroll = () => {
         var el = (ReactDOM.findDOMNode(this) as Element).getBoundingClientRect()
         var lastLi = (this.myRef.current as Element).getBoundingClientRect()
@@ -46,6 +47,7 @@ class PokeList extends Component<PokeListProps, PokeListState> {
         console.log(this.state.apiToCall)
     }
 
+    // Build and update pokemon list
     listSetter = () => {
         this.setState({
             loading: true
@@ -62,6 +64,7 @@ class PokeList extends Component<PokeListProps, PokeListState> {
             .catch(function (error) { console.log(error) })
     }
 
+    // Render pokemon List
     renderList = () => {
         var pokemons = this.state.pokemonDisplayed
         return pokemons.map(
