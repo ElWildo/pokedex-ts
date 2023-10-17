@@ -16,8 +16,7 @@ Built using Typescript, React and WebPack
 1. cd into the folder
 1. Run `npm install` to install all the dependencies
 1. Run `npm build` to build the project
-1. Access to the project opening the index.html file inside the build folder
-2. Or run `npm start` to run the project locally
+1. Access to the project opening the index.html file inside the build folder or run `npm start` to run the project locally
 
 
 ## Accessing the app live
