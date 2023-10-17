@@ -19,7 +19,9 @@ type PokeListState = {
 
 
 class PokeList extends Component<PokeListProps, PokeListState> {
-    private myRef: React.RefObject<unknown>;
+
+    private myRef: React.RefObject<HTMLInputElement>;
+
     state: PokeListState = {
         apiToCall: global.API + "?limit=10",
         pokemonDisplayed: [],
@@ -30,7 +32,7 @@ class PokeList extends Component<PokeListProps, PokeListState> {
 
     constructor(props: PokeListProps) {
         super(props)
-        this.myRef = React.createRef() as React.MutableRefObject<HTMLInputElement>;
+        this.myRef = React.createRef();
     }
 
     // Allow lazy loading requesting new data only when the element at the end of the list reach the visible area
@@ -83,7 +85,7 @@ class PokeList extends Component<PokeListProps, PokeListState> {
         return (
             <div className="poke-list">
                 {this.renderList()}
-                <div className="endList" key='endList' ref={this.myRef as React.MutableRefObject<HTMLInputElement>} />
+                <div className="endList" key='endList' ref={this.myRef} />
             </div>
         )
     }
